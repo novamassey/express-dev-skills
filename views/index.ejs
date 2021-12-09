@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
+
+  <%- include('./partials/header') %>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href ="/skills">Nova's Skills</a>
-  </body>
-</html>
+    <h1><%= title %> as of <%= time %></h1>
+    <p>Welcome to Nova's <%= title %></p>
+    
+  <%- include('./partials/footer') %>

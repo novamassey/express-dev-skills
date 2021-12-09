@@ -1,12 +1,5 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova's Express Skills</title>
-</head>
-<body>
+
+<%- include('../partials/header') %>
     <h2><%= skill.skill %> Components Mastered</h2>
         <ol>
             <% for (i =0; i < skill.details.length; i++) { %>
@@ -15,6 +8,12 @@
             </li>
        <% } %>
         </ol>
-</body>
-</html>
+        <form action="/skills/<%=skill.id%>?_method=DELETE" method="POST">
+            <button type ="submit" class ="btn btn-danger">DELETE</button>
+        </form>
+        <form action="/skills/<%=skill.id%>/edit?_method=EDIT" method="GET">
+            <button type ="submit">EDIT</button>
+        </form>
+
+<%- include('../partials/footer') %>
     
